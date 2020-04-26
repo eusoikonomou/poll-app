@@ -3,7 +3,7 @@
   "author": "Efstathios Oikonomou <eusoikonomou@gmail.com>",
   "repository": "https://github.com/eusoikonomou/poll-app",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --config webpack.dev.js",
+    "start": "webpack-dev-server --config webpack.dev.js",
     "watch": "webpack --watch",
     "build": "webpack --mode production --config webpack.prod.js"
   },
