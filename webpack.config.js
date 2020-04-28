@@ -8,11 +8,18 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    rules: [{
-      test: /\.(jsx|js)$/,
-      include: path.resolve(__dirname, 'src'),
-      use: ['babel-loader'],
-    }],
+    rules: [
+      {
+        test: /\.(jsx|js)$/,
+        include: path.resolve(__dirname, 'src'),
+        use: ['babel-loader'],
+      },
+      {
+        test: /\.(sc|c)ss$/,
+        include: path.resolve(__dirname, 'src'),
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
