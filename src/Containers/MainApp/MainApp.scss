@@ -1,0 +1,24 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 50px);
+
+  .section {
+    padding: 10px;
+    flex: 1;
+    border: 1px solid #363636;
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 900;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  height: calc(100% - 68px);
+}

@@ -1,0 +1,32 @@
+.option-container {
+  margin-bottom: 15px;
+
+  .material-icons {
+    font-size: 22px;
+    vertical-align: middle;
+    color: #ad0000;
+    cursor: default;
+  }
+
+  .error-msg {
+    color: red;
+  }
+}
+
+#poll-question {
+  height: 32px;
+  margin-bottom: 5px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+
+  .message {
+    flex: 1;
+  }
+
+  .btn-holder {
+    margin-right: 5px;
+  }
+}

@@ -5,6 +5,6 @@ import App from './App';
 const root = document.getElementById('react-app');
 
 render(
-  <App/>,
+  <App />,
   root,
 );

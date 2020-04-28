@@ -11,6 +11,9 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
+  "compilerOptions": {
+    "experimentalDecorators": true
+  },
   "parserOptions": {
     "parser": "babel-eslint",
     "ecmaFeatures": {
