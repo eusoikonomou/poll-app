@@ -5,8 +5,6 @@ export default class PollStore {
 
   @observable pollOptions = [];
 
-  @observable votes = [];
-
   @observable pollLocked = false;
 
   @action setPollQuestion = (data) => {
@@ -27,7 +25,6 @@ export default class PollStore {
   }
 
   @action reset = () => {
-    this.votes = [];
     this.pollOptions = [];
     this.pollQuestion = '';
     this.pollLocked = false;
