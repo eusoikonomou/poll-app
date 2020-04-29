@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const InputField = ({
-                      value,
-                      onChange,
-                      id,
-                      placeholder,
-                      disabled,
-                    }) => (
+  value,
+  onChange,
+  id,
+  placeholder,
+  disabled,
+}) => (
   <input
     id={id}
     className="poll-question"

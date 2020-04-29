@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader renders properly 1`] = `
+<div
+  className="header"
+>
+  Poll App
+</div>
+`;

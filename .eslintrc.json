@@ -11,11 +11,8 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "compilerOptions": {
-    "experimentalDecorators": true
-  },
+  "parser": "babel-eslint",
   "parserOptions": {
-    "parser": "babel-eslint",
     "ecmaFeatures": {
       "jsx": true
     },
@@ -23,8 +20,26 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react",
+    "jest"
   ],
   "rules": {
-  }
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/webpack.*.js", "**/setupTests.js", "**/*.test.js", "**/*.test.jsx"]}]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.js",
+        "**/*.test.jsx"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }

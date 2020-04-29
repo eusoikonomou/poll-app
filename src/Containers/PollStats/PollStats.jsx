@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { Bar, BarChart, CartesianGrid, Tooltip, XAxis, YAxis } from 'recharts';
+import Chart from '../../Components/Chart/Chart';
 
 const PollStats = observer(({ store }) => {
   const { pollQuestion, pollOptions } = store;
@@ -18,17 +18,11 @@ const PollStats = observer(({ store }) => {
       }}
     >
       <div className="section-title">{pollQuestion || 'Poll Question'}</div>
-      <BarChart
+      <Chart
         height={450}
         width={450}
         data={pollOptions.map((option) => ({ name: option.value, value: option.count }))}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis dataKey="value" allowDecimals={false} />
-        <Tooltip />
-        <Bar dataKey="value" fill="#8884d8" />
-      </BarChart>
+      />
     </div>
   );
 });

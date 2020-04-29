@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField renders properly with the correct props 1`] = `
+<input
+  className="poll-question"
+  disabled={true}
+  id="test-id"
+  maxLength={80}
+  onChange={[Function]}
+  placeholder="test-placeholder"
+  value="test-value"
+/>
+`;

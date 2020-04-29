@@ -2,8 +2,11 @@ import { action, observable } from 'mobx';
 
 export default class PollStore {
   @observable pollQuestion = '';
+
   @observable pollOptions = [];
+
   @observable votes = [];
+
   @observable pollLocked = false;
 
   @action setPollQuestion = (data) => {
@@ -18,8 +21,9 @@ export default class PollStore {
     this.pollOptions.push(data);
   }
 
-  @action addVote = optionId => {
-    this.pollOptions.find((option) => option.id === optionId).count++;
+  @action addVote = (optionId) => {
+    const option = this.pollOptions.find((opt) => opt.id === optionId);
+    option.count += 1;
   }
 
   @action reset = () => {
