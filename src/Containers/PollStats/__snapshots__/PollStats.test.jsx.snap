@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PollStats should render successfully 1`] = `
+<div
+  className="section"
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flex": 2,
+      "flexDirection": "column",
+      "justifyContent": "center",
+    }
+  }
+>
+  <div
+    className="section-title"
+  >
+    Poll Question
+  </div>
+  <Chart
+    data={Array []}
+    height={450}
+    width={450}
+    xDataKey="name"
+    yDataKey="value"
+  />
+</div>
+`;

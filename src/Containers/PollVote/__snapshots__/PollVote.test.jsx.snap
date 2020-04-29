@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PollVote should render successfully 1`] = `
+<div
+  className="section"
+>
+  <div
+    className="section-title"
+  >
+    Enter poll question
+  </div>
+  <div
+    className="flex-container"
+  />
+  <div
+    className="footer"
+  >
+    <button
+      className="vote-btn"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      Vote
+    </button>
+    <div
+      className="footer-info"
+    >
+      Lock poll options to enable voting
+    </div>
+  </div>
+</div>
+`;

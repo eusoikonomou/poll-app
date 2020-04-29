@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PollOptions should render successfully 1`] = `
+<div
+  className="section"
+>
+  <InputField
+    disabled={false}
+    id="poll-question"
+    onChange={[Function]}
+    placeholder="Input the question here..."
+    value=""
+  />
+  <button
+    disabled={true}
+    id="lock-btn"
+    onClick={[Function]}
+    style={
+      Object {
+        "verticalAlign": "middle",
+      }
+    }
+    type="button"
+  >
+    <i
+      className="material-icons"
+      style={
+        Object {
+          "fontSize": "26px  ",
+        }
+      }
+    >
+      lock_open
+    </i>
+  </button>
+  <div
+    className="flex-container"
+  >
+    <div
+      className="option-container"
+      key="new_option"
+    >
+      <InputField
+        disabled={false}
+        id="new_option"
+        onChange={[Function]}
+        placeholder="Add new option"
+        value=""
+      />
+      <button
+        className="add-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        Add
+      </button>
+    </div>
+  </div>
+  <div
+    className="footer"
+  >
+    <div
+      className="message"
+    >
+      0/10 possible answers
+    </div>
+    <div
+      className="btn-holder"
+    >
+      <button
+        className="reset-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        Reset
+      </button>
+    </div>
+  </div>
+</div>
+`;

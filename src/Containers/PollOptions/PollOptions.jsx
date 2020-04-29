@@ -61,6 +61,7 @@ const PollOptions = observer(({ store }) => {
         disabled={pollOptions.length < 2 || pollQuestion.length === 0}
         onClick={lockPoll}
         style={{ verticalAlign: 'middle' }}
+        id="lock-btn"
       >
         <i className="material-icons" style={{ fontSize: '26px  ' }}>{pollLocked ? 'lock' : 'lock_open'}</i>
       </button>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InputField renders properly with the correct props 1`] = `
+exports[`InputField should render properly with the correct props 1`] = `
 <input
   className="poll-question"
   disabled={true}

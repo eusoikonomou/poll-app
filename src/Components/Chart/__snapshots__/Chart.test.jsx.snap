@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Chart renders successfully 1`] = `
+exports[`Chart should render successfully 1`] = `
 <BarChart
   barCategoryGap="10%"
   barGap={4}
