@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import InputField from '../../Components/InputField/InputField';
-import { generateUUID } from '../../../utils/generalUtils';
+import { generateUUID, deepCopy } from '../../../utils/generalUtils';
 import './PollOptions.scss';
 
 const PollOptions = observer(({ store }) => {
@@ -36,8 +36,10 @@ const PollOptions = observer(({ store }) => {
     setNewOption('');
   };
 
-  const onDeleteOption = (index) => () => {
-    setPollOptions([...pollOptions.slice(0, index), ...pollOptions.slice(index + 1)]);
+  const onDeleteOption = (optionId) => () => {
+    const optionsCopy = deepCopy(pollOptions);
+    optionsCopy.splice((opt) => opt.id === optionId);
+    setPollOptions(optionsCopy);
   };
 
   const resetPoll = () => {
@@ -87,7 +89,7 @@ const PollOptions = observer(({ store }) => {
             </div>
           ))}
           {(pollOptions.length < 10 && !pollLocked) && (
-            <div className="option-container" key="new_option">
+            <div className="option-container" key="new_option_container">
               <InputField
                 id="new_option"
                 onChange={onNewOptionChange}
@@ -97,6 +99,7 @@ const PollOptions = observer(({ store }) => {
               />
               <button
                 type="button"
+                id="add_new_option"
                 className="add-btn"
                 onClick={onAddNewOption}
                 disabled={

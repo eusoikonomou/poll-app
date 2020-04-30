@@ -40,4 +40,21 @@ describe('PollOptions', () => {
     wrapper = shallow(<PollOptions store={store} />);
     expect(lockButton().prop('disabled')).toBe(false);
   });
+
+  test('should enable the user to add a new option', () => {
+    const wrapper = shallow(<PollOptions store={store} />);
+    const newOptionInput = () => wrapper.find('#new_option');
+    const addButton = () => wrapper.find('#add_new_option');
+    newOptionInput().simulate('change', { target: { value: 'testOption' } });
+    addButton().simulate('click');
+    expect(store.pollOptions).toHaveLength(1);
+  });
+
+  test('should enable the user to remove an existing option', () => {
+    store.setPollOptions([{ id: 'opt1', value: 'opt1', count: 0 }]);
+    const wrapper = shallow(<PollOptions store={store} />);
+    const deleteButton = () => wrapper.find('.del-btn').at(0);
+    deleteButton().simulate('click');
+    expect(store.pollOptions).toHaveLength(0);
+  });
 });

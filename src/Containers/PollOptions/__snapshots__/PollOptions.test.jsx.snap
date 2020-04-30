@@ -38,7 +38,7 @@ exports[`PollOptions should render successfully 1`] = `
   >
     <div
       className="option-container"
-      key="new_option"
+      key="new_option_container"
     >
       <InputField
         disabled={false}
@@ -50,6 +50,7 @@ exports[`PollOptions should render successfully 1`] = `
       <button
         className="add-btn"
         disabled={true}
+        id="add_new_option"
         onClick={[Function]}
         type="button"
       >
