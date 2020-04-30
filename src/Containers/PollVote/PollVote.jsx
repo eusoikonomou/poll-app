@@ -36,7 +36,7 @@ const PollVote = observer(({ store }) => {
               onChange={onSelect(option.id)}
               disabled={!pollLocked}
             />
-            <label htmlFor={option.id}>{option.value}</label>
+            <label className="option-label" htmlFor={option.id}>{option.value}</label>
           </div>
         ))}
       </div>

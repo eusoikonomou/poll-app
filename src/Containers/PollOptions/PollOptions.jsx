@@ -38,7 +38,8 @@ const PollOptions = observer(({ store }) => {
 
   const onDeleteOption = (optionId) => () => {
     const optionsCopy = deepCopy(pollOptions);
-    optionsCopy.splice((opt) => opt.id === optionId);
+    const optionIndex = optionsCopy.findIndex((opt) => opt.id === optionId);
+    optionsCopy.splice(optionIndex, 1);
     setPollOptions(optionsCopy);
   };
 
@@ -57,7 +58,12 @@ const PollOptions = observer(({ store }) => {
 
   return (
     <div className="section">
-      <InputField id="poll-question" value={pollQuestion} onChange={onPollQuestionChange} />
+      <InputField
+        id="poll-question"
+        value={pollQuestion}
+        onChange={onPollQuestionChange}
+        disabled={pollLocked}
+      />
       <button
         type="button"
         disabled={pollOptions.length < 2 || pollQuestion.length === 0}

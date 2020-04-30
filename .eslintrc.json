@@ -21,7 +21,8 @@
   },
   "plugins": [
     "react",
-    "jest"
+    "jest",
+    "cypress"
   ],
   "rules": {
     "jest/no-disabled-tests": "warn",
@@ -29,7 +30,11 @@
     "jest/no-identical-title": "error",
     "jest/prefer-to-have-length": "warn",
     "jest/valid-expect": "error",
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/webpack.*.js", "**/setupTests.js", "**/*.test.js", "**/*.test.jsx"]}]
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/webpack.*.js", "**/setupTests.js", "**/*.test.js", "**/*.test.jsx"]}],
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/no-force": "warn"
   },
   "overrides": [
     {
@@ -39,6 +44,14 @@
       ],
       "env": {
         "jest": true
+      }
+    },
+    {
+      "files": [
+        "cypress/integration/*_spec.js"
+      ],
+      "env": {
+        "cypress/global": true
       }
     }
   ]

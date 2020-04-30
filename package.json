@@ -7,7 +7,8 @@
     "watch": "webpack --watch",
     "build": "webpack --mode production --config webpack.prod.js",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "and": "^0.0.3",
@@ -29,11 +30,13 @@
     "babel-loader": "^8.1.0",
     "babel-preset-mobx": "^2.0.0",
     "css-loader": "^3.5.3",
+    "cypress": "^4.5.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
