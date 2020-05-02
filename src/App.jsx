@@ -3,6 +3,8 @@ import AppHeader from './Components/AppHeader/AppHeader';
 import MainApp from './Containers/MainApp/MainApp';
 import PollStore from './store/PollStore';
 
+import './App.scss';
+
 const pollStore = new PollStore();
 
 const App = () => (

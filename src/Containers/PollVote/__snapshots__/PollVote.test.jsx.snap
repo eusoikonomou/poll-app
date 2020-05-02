@@ -2,21 +2,25 @@
 
 exports[`PollVote should render successfully 1`] = `
 <div
-  className="section"
+  className="section space"
 >
   <div
-    className="section-title"
+    className="main"
   >
-    Enter poll question
+    <div
+      className="section-title"
+    >
+      Enter poll question
+    </div>
+    <div
+      className="flex-container"
+    />
   </div>
-  <div
-    className="flex-container"
-  />
   <div
     className="footer"
   >
     <button
-      className="vote-btn"
+      className="btn vote-btn"
       disabled={true}
       onClick={[Function]}
       type="button"

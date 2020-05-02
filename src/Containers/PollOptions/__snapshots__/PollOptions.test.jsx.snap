@@ -2,60 +2,65 @@
 
 exports[`PollOptions should render successfully 1`] = `
 <div
-  className="section"
+  className="section space"
 >
-  <InputField
-    disabled={false}
-    id="poll-question"
-    onChange={[Function]}
-    placeholder="Input the question here..."
-    value=""
-  />
-  <button
-    disabled={true}
-    id="lock-btn"
-    onClick={[Function]}
-    style={
-      Object {
-        "verticalAlign": "middle",
-      }
-    }
-    type="button"
+  <div
+    className="main"
   >
-    <i
-      className="material-icons"
+    <InputField
+      disabled={false}
+      id="poll-question"
+      onChange={[Function]}
+      placeholder="Input the question here..."
+      value=""
+    />
+    <button
+      className=""
+      disabled={true}
+      id="lock-btn"
+      onClick={[Function]}
       style={
         Object {
-          "fontSize": "26px  ",
+          "verticalAlign": "middle",
         }
       }
+      type="button"
     >
-      lock_open
-    </i>
-  </button>
-  <div
-    className="flex-container"
-  >
-    <div
-      className="option-container"
-      key="new_option_container"
-    >
-      <InputField
-        disabled={false}
-        id="new_option"
-        onChange={[Function]}
-        placeholder="Add new option"
-        value=""
-      />
-      <button
-        className="add-btn"
-        disabled={true}
-        id="add_new_option"
-        onClick={[Function]}
-        type="button"
+      <i
+        className="material-icons"
+        style={
+          Object {
+            "fontSize": "26px  ",
+          }
+        }
       >
-        Add
-      </button>
+        lock_open
+      </i>
+    </button>
+    <div
+      className="flex-container"
+    >
+      <div
+        className="option-container"
+        key="new_option_container"
+      >
+        <InputField
+          disabled={false}
+          id="new_option"
+          onChange={[Function]}
+          placeholder="Add new option"
+          value=""
+        />
+        <button
+          className="btn add-btn"
+          disabled={true}
+          id="add_new_option"
+          onClick={[Function]}
+          type="button"
+        >
+          Add
+        </button>
+      </div>
     </div>
   </div>
   <div
@@ -70,7 +75,7 @@ exports[`PollOptions should render successfully 1`] = `
       className="btn-holder"
     >
       <button
-        className="reset-btn"
+        className="btn reset-btn"
         onClick={[Function]}
         type="button"
       >

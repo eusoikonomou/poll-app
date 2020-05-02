@@ -22,29 +22,31 @@ const PollVote = observer(({ store }) => {
   };
 
   return (
-    <div className="section">
-      <div className="section-title">{pollQuestion || 'Enter poll question'}</div>
-      <div className="flex-container">
-        {pollOptions.map((option) => (
-          <div className="vote-option-container" key={option.id}>
-            <input
-              type="radio"
-              id={option.id}
-              name={option.id}
-              value={option.id}
-              checked={selectedOption === option.id}
-              onChange={onSelect(option.id)}
-              disabled={!pollLocked}
-            />
-            <label className="option-label" htmlFor={option.id}>{option.value}</label>
-          </div>
-        ))}
+    <div className="section space">
+      <div className="main">
+        <div className="section-title">{pollQuestion || 'Enter poll question'}</div>
+        <div className="flex-container">
+          {pollOptions.map((option) => (
+            <div className="vote-option-container" key={option.id}>
+              <input
+                type="radio"
+                id={option.id}
+                name={option.id}
+                value={option.id}
+                checked={selectedOption === option.id}
+                onChange={onSelect(option.id)}
+                disabled={!pollLocked}
+              />
+              <label className="option-label" htmlFor={option.id}>{option.value}</label>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="footer">
         <button
           type="button"
           disabled={selectedOption === null || !pollLocked}
-          className="vote-btn"
+          className="btn vote-btn"
           onClick={castVote}
         >
           Vote

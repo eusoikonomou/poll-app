@@ -18,9 +18,14 @@
   margin-bottom: 5px;
 }
 
+.locked {
+  background-color: '#EED179';
+}
+
 .footer {
   display: flex;
   flex-direction: row;
+  font-weight: 600;
 
   .message {
     flex: 1;

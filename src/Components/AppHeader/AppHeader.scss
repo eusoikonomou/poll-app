@@ -1,7 +1,13 @@
 .header {
-  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
   font-weight: 900;
   padding: 7px 0;
-  border: 1px solid #363636;
-  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }

@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MainApp should render successfully 1`] = `
-<div
-  className="main-container"
->
+<Fragment>
   <PollOptions
     store={PollStore {}}
   />
@@ -13,5 +11,5 @@ exports[`MainApp should render successfully 1`] = `
   <PollStats
     store={PollStore {}}
   />
-</div>
+</Fragment>
 `;

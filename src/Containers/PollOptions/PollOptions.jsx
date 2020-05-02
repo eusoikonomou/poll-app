@@ -57,77 +57,80 @@ const PollOptions = observer(({ store }) => {
   };
 
   return (
-    <div className="section">
-      <InputField
-        id="poll-question"
-        value={pollQuestion}
-        onChange={onPollQuestionChange}
-        disabled={pollLocked}
-      />
-      <button
-        type="button"
-        disabled={pollOptions.length < 2 || pollQuestion.length === 0}
-        onClick={lockPoll}
-        style={{ verticalAlign: 'middle' }}
-        id="lock-btn"
-      >
-        <i className="material-icons" style={{ fontSize: '26px  ' }}>{pollLocked ? 'lock' : 'lock_open'}</i>
-      </button>
-      <div className="flex-container">
-        <>
-          {pollOptions.map((option) => (
-            <div className="option-container" key={option.id}>
-              <InputField
-                id={option.id}
-                onChange={onOptionChange(option.id)}
-                value={option.value}
-                placeholder="Add new option"
-                disabled={pollLocked}
-              />
-              <button
-                type="button"
-                className="del-btn"
-                onClick={onDeleteOption(option.id)}
-                disabled={pollLocked}
-              >
-                X
-              </button>
-            </div>
-          ))}
-          {(pollOptions.length < 10 && !pollLocked) && (
-            <div className="option-container" key="new_option_container">
-              <InputField
-                id="new_option"
-                onChange={onNewOptionChange}
-                value={newOption}
-                placeholder="Add new option"
-                disabled={pollLocked}
-              />
-              <button
-                type="button"
-                id="add_new_option"
-                className="add-btn"
-                onClick={onAddNewOption}
-                disabled={
-                  pollOptions.find((option) => option.value === newOption)
-                  || newOption.length === 0
-                }
-              >
-                Add
-              </button>
-              {pollOptions.find((option) => option.value === newOption) && (
-                <div className="error-msg">Duplicate options are invalid</div>
-              )}
-            </div>
-          )}
-        </>
+    <div className="section space">
+      <div className="main">
+        <InputField
+          id="poll-question"
+          value={pollQuestion}
+          onChange={onPollQuestionChange}
+          disabled={pollLocked}
+        />
+        <button
+          type="button"
+          disabled={pollOptions.length < 2 || pollQuestion.length === 0}
+          onClick={lockPoll}
+          style={{ verticalAlign: 'middle' }}
+          id="lock-btn"
+          className={pollLocked ? 'locked' : ''}
+        >
+          <i className="material-icons" style={{ fontSize: '26px  ' }}>{pollLocked ? 'lock' : 'lock_open'}</i>
+        </button>
+        <div className="flex-container">
+          <>
+            {pollOptions.map((option) => (
+              <div className="option-container" key={option.id}>
+                <InputField
+                  id={option.id}
+                  onChange={onOptionChange(option.id)}
+                  value={option.value}
+                  placeholder="Add new option"
+                  disabled={pollLocked}
+                />
+                <button
+                  type="button"
+                  className="btn del-btn"
+                  onClick={onDeleteOption(option.id)}
+                  disabled={pollLocked}
+                >
+                  X
+                </button>
+              </div>
+            ))}
+            {(pollOptions.length < 10 && !pollLocked) && (
+              <div className="option-container" key="new_option_container">
+                <InputField
+                  id="new_option"
+                  onChange={onNewOptionChange}
+                  value={newOption}
+                  placeholder="Add new option"
+                  disabled={pollLocked}
+                />
+                <button
+                  type="button"
+                  id="add_new_option"
+                  className="btn add-btn"
+                  onClick={onAddNewOption}
+                  disabled={
+                    pollOptions.find((option) => option.value === newOption)
+                    || newOption.length === 0
+                  }
+                >
+                  Add
+                </button>
+                {pollOptions.find((option) => option.value === newOption) && (
+                  <div className="error-msg">Duplicate options are invalid</div>
+                )}
+              </div>
+            )}
+          </>
+        </div>
       </div>
       <div className="footer">
         <div className="message">
           {`${pollOptions.length}/10 possible answers`}
         </div>
         <div className="btn-holder">
-          <button type="button" onClick={resetPoll} className="reset-btn">Reset</button>
+          <button type="button" onClick={resetPoll} className="btn reset-btn">Reset</button>
         </div>
       </div>
     </div>

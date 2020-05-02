@@ -8,11 +8,11 @@ import PollStats from '../PollStats';
 import './MainApp.scss';
 
 const MainApp = observer(({ store }) => (
-  <div className="main-container">
+  <>
     <PollOptions store={store} />
     <PollVote store={store} />
     <PollStats store={store} />
-  </div>
+  </>
 ));
 
 MainApp.displayName = 'MainApp';
