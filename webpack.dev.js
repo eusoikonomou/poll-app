@@ -4,7 +4,7 @@ const baseConfig = require('./webpack.config');
 module.exports = Object.assign(baseConfig, {
   mode: 'development',
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.resolve(__dirname, 'build'),
     port: 9000,
     open: true,
   },
