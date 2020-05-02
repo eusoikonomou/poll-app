@@ -3,8 +3,6 @@ Poll-App
 
 This is a simple SPA which enables the user to create a poll by providing a question and a set of possible answer (maximum 10 options).
 
-You can view it @https://eusoikonomou.github.io/poll-app/!
-
 # Usage
 The poll application is used in the following manner:
 - First you must input a poll question in the first input field.
