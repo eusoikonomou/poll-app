@@ -58,13 +58,13 @@ describe('Poll Application', () => {
       cy.get('#lock-btn').should('not.be.disabled');
   });
   it('has left section inputs and buttons enabled and mid and right sections buttons and inputs disabled', () => {
-    cy.get(':nth-child(1) > .flex-container input').each(($el) => {
+    cy.get('.app-container > :nth-child(2) input').each(($el) => {
       cy.wrap($el).should('not.be.disabled');
     }).then(() => {
       cy.get('.del-btn').each(($el) => {
         cy.wrap($el).should('not.be.disabled');
       }).then(() => {
-        cy.get(':nth-child(2) > .flex-container input').each(($el) => {
+        cy.get('.app-container > :nth-child(3) input').each(($el) => {
           cy.wrap($el).should('be.disabled');
         });
       });
@@ -74,13 +74,13 @@ describe('Poll Application', () => {
       cy.get('#lock-btn')
         .click()
         .then(() => {
-          cy.get(':nth-child(1) > .flex-container input').each(($el) => {
+          cy.get('.app-container > :nth-child(2) input').each(($el) => {
             cy.wrap($el).should('be.disabled');
           });
           cy.get('.del-btn').each(($el) => {
             cy.wrap($el).should('be.disabled');
           });
-          cy.get(':nth-child(2) > .flex-container input').each(($el) => {
+          cy.get('.app-container > :nth-child(3) input').each(($el) => {
             cy.wrap($el).should('not.be.disabled');
           });
         })
@@ -89,7 +89,7 @@ describe('Poll Application', () => {
     cy.get('.vote-btn').should('be.disabled');
   });
   it('enables vote button when poll is locked and option is selected', () => {
-    cy.get(':nth-child(2) > .flex-container > :nth-child(2) >input')
+    cy.get(':nth-child(3) > .main > .flex-container > :nth-child(1) > input')
       .click()
       .then(() => {
         cy.get('.vote-btn').should('not.be.disabled');
@@ -99,7 +99,7 @@ describe('Poll Application', () => {
     cy.get('.vote-btn')
       .click()
       .then(() => {
-        cy.get(':nth-child(2) > .recharts-rectangle')
+        cy.get(':nth-child(4) .recharts-rectangle')
           .trigger('mouseover')
           .then(() => {
             cy.get('.recharts-tooltip-item-value')
